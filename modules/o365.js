@@ -1,11 +1,14 @@
 const { handleO365 } = require("../../../O365MAIL-API/js/handleApiMail.js");
 
 async function sendO365  (req, res)  {
- console.log('sendO365');
+ 
  
  
   let mailnr = req.query.mailnr;
-  
+  var d = new Date();
+  var datetime = d.toLocaleString(); 	
+  console.log(datetime +' sendO365 mailnr: ' +mailnr);
+    
   
    
  // res.send('Mollie wordt uitgevoerd ; setletter: ' +setletter + ' filiaal: '+ filiaal+ ' ordernr: '+ ordernr);
